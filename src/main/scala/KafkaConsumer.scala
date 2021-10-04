@@ -23,7 +23,9 @@ Client consumer failure: Exactly-once delivery must account for client failures 
 
 Producer-to-broker RPC failure: Broker can crash after writing a message but before it sends an ack back to the producer. Producer assuming message was not written successfully and to retries it which can lead data duplicacy.
 To overcome this producers are made Idempodent using property “enable.idempotence=true”. When this feature is enabled each batch of messages sent to Kafka will contain a sequence number that the broker will use to dedupe any duplicate send. This sequence number is persisted to the replicated log, so even if the leader fails, any broker that takes over will also know if a resend is a duplicate.
+ https://www.javainuse.com/kafka2-6-min.JPG
  */
+
 
 object KafkaConsumer {
 
