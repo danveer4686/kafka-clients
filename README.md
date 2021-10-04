@@ -1,1 +1,1 @@
-# kafka-clients
+# Kafka consumer producer example in scala
